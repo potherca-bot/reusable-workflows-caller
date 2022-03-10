@@ -1,0 +1,10 @@
+---
+on:
+  - push
+
+jobs:
+  job:
+    uses: potherca-bot/reusable-workflows-callee/.github/workflows/matrix-workflow.yml@main
+    with:
+      versions: >-
+        ["7.2", "7.3","7.4", "8.0", "8.1"]
