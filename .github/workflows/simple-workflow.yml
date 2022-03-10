@@ -1,0 +1,7 @@
+---
+on:
+  - push
+
+jobs:
+  job:
+    uses:  potherca-bot/reusable-workflows-callee/.github/workflows/simple-workflow.yml@main
