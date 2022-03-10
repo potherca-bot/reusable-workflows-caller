@@ -6,4 +6,4 @@ jobs:
   job:
     runs-on: ubuntu-latest
     steps:
-      - uses:  potherca-bot/reusable-workflows-callee/.github/workflows/workflow.yml
+      - uses:  potherca-bot/reusable-workflows-callee/.github/workflows/workflow.yml@main
