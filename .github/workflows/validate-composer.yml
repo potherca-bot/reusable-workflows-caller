@@ -5,5 +5,3 @@ on:
 jobs:
   job:
     uses: potherca-bot/reusable-workflows-callee/.github/workflows/validate-composer.yml@main
-    with:
-      strict: true

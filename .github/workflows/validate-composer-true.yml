@@ -7,3 +7,5 @@ jobs:
     uses: potherca-bot/reusable-workflows-callee/.github/workflows/validate-composer.yml@main
     with:
       check-lock: true
+      check-publish: true
+      strict: true
