@@ -1,0 +1,10 @@
+---
+on:
+  - push
+
+jobs:
+  job:
+    uses: potherca-bot/reusable-workflows-callee/.github/workflows/validate-composer.yml@main
+    with:
+      check-lock: false
+      strict: true
