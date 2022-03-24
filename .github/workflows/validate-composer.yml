@@ -3,5 +3,24 @@ on:
   - push
 
 jobs:
-  job:
+  job-default:
     uses: potherca-bot/reusable-workflows-callee/.github/workflows/validate-composer.yml@main
+
+  job-false:
+    uses: potherca-bot/reusable-workflows-callee/.github/workflows/validate-composer.yml@main
+    with:
+      check-lock: false
+      check-publish: false
+      strict: false
+
+  job-strict:
+    uses: potherca-bot/reusable-workflows-callee/.github/workflows/validate-composer.yml@main
+    with:
+      strict: true
+
+  job-true:
+    uses: potherca-bot/reusable-workflows-callee/.github/workflows/validate-composer.yml@main
+    with:
+      check-lock: true
+      check-publish: true
+      strict: true
