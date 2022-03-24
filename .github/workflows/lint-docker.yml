@@ -1,0 +1,27 @@
+---
+on:
+  - push
+
+jobs:
+  job-default:
+    uses: novoserve/github-workflows/.github/workflows/lint-docker.yml@main
+
+  job-config-file:
+    uses: novoserve/github-workflows/.github/workflows/lint-docker.yml@main
+    with:
+      config-file: tests/hadolint.yml
+
+  job-dockerfile:
+    uses: novoserve/github-workflows/.github/workflows/lint-docker.yml@main
+    with:
+      file: tests/Dockerfile
+
+  job-recursive:
+    uses: novoserve/github-workflows/.github/workflows/lint-docker.yml@main
+    with:
+      recursive: true
+
+  job-recursive-greedy:
+    uses: novoserve/github-workflows/.github/workflows/lint-docker.yml@main
+    with:
+      recursive-greedy: true
