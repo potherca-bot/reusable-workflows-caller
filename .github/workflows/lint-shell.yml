@@ -1,0 +1,23 @@
+---
+on:
+  - push
+
+# Cancels all previous workflow runs for the same branch that have not yet completed.
+concurrency:
+  # The concurrency group contains the workflow name and the branch name.
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  job-default:
+    uses: potherca-bot/reusable-workflows-callee/.github/workflows/lint-shell.yml@main
+
+  job-format:
+    uses: potherca-bot/reusable-workflows-callee/.github/workflows/lint-shell.yml@main
+    with:
+      format: gcc
+
+  job-files:
+    uses: potherca-bot/reusable-workflows-callee/.github/workflows/lint-shell.yml@main
+    with:
+      files: tests/example.bash
