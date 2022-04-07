@@ -1,0 +1,12 @@
+---
+on:
+  - push
+
+jobs:
+  job-default:
+    uses: ${{github.repository_owner}}/reusable-workflows-callee/.github/workflows/lint-yaml.yml@main
+
+  job-strict:
+    uses: ${{github.repository_owner}}/reusable-workflows-callee/.github/workflows/lint-yaml.yml@main
+    with:
+      strict: true
